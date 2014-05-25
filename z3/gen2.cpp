@@ -27,8 +27,8 @@ gen2::gen2(int _min, int _max, int _seed){
 bool gen2::setSeed(int _seed){
    if (_seed < 0)
       return false;
-   seed = _seed;  
-   x_2 = (seed % 29)/(seed%4);
+   seed = _seed;  //I use one seed to get all three params
+   x_2 = (seed % 29)/((seed%6) +1);
    x_1 =-(seed % 13);
    x_0 = seed % 43;
    counter = 0;
