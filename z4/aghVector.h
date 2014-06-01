@@ -6,6 +6,8 @@
 template<class T>
 class aghVector: public aghContainer<T> {
 public:
+   aghVector(){};
+   virtual ~aghVector(){};
    bool insert(int, T const&);
    T& at(int) const;
    int size(void) const{return 1;};

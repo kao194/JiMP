@@ -6,7 +6,12 @@
 template<class T>
 class aghContainer{
 public:
- /// \brief function adds an element to a container
+
+   aghContainer(){};   
+
+   virtual ~aghContainer(){};
+   
+   /// \brief function adds an element to a container
    ///
    /// \param _obj - element to add
    void append(T const& _obj);
