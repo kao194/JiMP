@@ -125,6 +125,6 @@ ostream& operator<<(ostream& _out, aghContainer<T> const& right)
       _out << right.at(i) << endl;
    }
    return &_out;
-};
+}
 
 #endif

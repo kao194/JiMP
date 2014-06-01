@@ -4,8 +4,7 @@
 template<class T>
 void aghContainer<T>::append(T const& _obj)
 {
-   if(!insert(size(),_obj))
-      1;
+   insert(size(),_obj);
 }
 
 template<class T>
@@ -23,8 +22,10 @@ bool aghContainer<T>::replace(int _place, T const& _obj)
 template<class T>
 void aghContainer<T>::clear()
 {
-   for(int i=0;i<size();i++)
-      remove(0);
+   for(int i=(size()-1);i>=0;i--)
+   {
+      remove(i);
+   }
 }
 
 template<class T>

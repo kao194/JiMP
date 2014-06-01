@@ -7,11 +7,10 @@ void showTestResult(int, bool);
 int main(void)
 {
     cout << "main by kk. Last updated 15.04.2013\n";
-
     aghVector<aghVector<int> > a;
     aghContainer<int>* c1 = new aghVector<int>;
     aghContainer<int>* c2;
-   // a << *((aghVector<int>*)c1);
+    a << *((aghVector<int>*)c1);
 
     // 1st test - dodawanie do pojemnika stalych, zmiennych, tymczasowych
     c1->append(3);
@@ -25,7 +24,7 @@ int main(void)
     showTestResult(1, t1);
 
     // 2nd test - konstruktor
-  //  c2 = new aghVector<int>(*c1);
+    c2 = new aghVector<int>(*c1);
     bool t2 = c2->size() == 3;
     int ttab2[] = {2, 3, 2};
     for(int i=0;i<3;i++)
@@ -105,7 +104,7 @@ int main(void)
     showTestResult(12, a.at(0).isEmpty());
 
     // 13th test - dzialanie operatora przypisania
- //   *c2  = a.at(0) = *c1;
+    *c2  = a.at(0) = *c1;
     showTestResult(13, *c1 == a.at(0));
 
     // 14th test - operator przypisania
