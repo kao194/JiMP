@@ -3,6 +3,12 @@
 
 #include "aghInclude.h"
 
+/**
+* \class aghContainer
+* \author Krzysztof Waclawik, Jakub Slowik
+* \date 31.05.2014
+* \brief Interface to take care of containers
+*/
 template<class T>
 class aghContainer{
 public:
