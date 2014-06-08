@@ -42,13 +42,7 @@ int aghContainer<T>::indexOf(T const& _value, int _from) const
 template<class T>
 bool aghContainer<T>::contains(T const& _value, int _from)const
 {
-//wondering about just checking indexOf()!=-1, but I guess for such short code it would just complicate
-   for(int i=_from;i<size();i++)
-   {
-      if(at(i)==_value) 
-         return true;
-   }
-   return false;
+   return (indexOf(_value, _from)!=-1);
 }
 
 template<class T>
